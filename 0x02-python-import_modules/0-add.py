@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-import add_0
+if __name__ == "__main__":
 
-a = 1
-b = 2
+    from add_0 import add
 
-print("{} + {} = {}".format(a, b, add_0.add(a, b)))
+    a = 1
+    b = 2
+    result = add(a, b)
+    print("{:d} + {:d} = {:d}".format(a, b, result))
