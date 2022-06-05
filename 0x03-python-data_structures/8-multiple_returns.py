@@ -2,7 +2,6 @@
 
 
 def multiple_returns(sentence):
-    firstLetter
     if not sentence:
         return (0, None)
     else:
