@@ -27,30 +27,30 @@ listint_t *reverse_listint(listint_t **head)
 int is_palindrome(listint_t **head)
 {
 	size_t size = 0, i;
-	listint_t *tmp, *rev, *mid;
+	listint_t *tmpo, *reve, *mid;
 
 	if (*head == NULL || (*head)->next == NULL)
 		return (1);
-	tmp = *head;
+	tmpo = *head;
 
 	for (size = 0; tmp; size++)
-		tmp = tmp->next;
-	tmp = *head;
+		tmpo = tmpo->next;
+	tmpo = *head;
 	for (i = 0; i < (size / 2) - 1; i++)
-		tmp = tmp->next;
-	if ((size % 2) == 0 && tmp->n != tmp->next->n)
+		tmpo = tmpo->next;
+	if ((size % 2) == 0 && tmpo->n != tmpo->next->n)
 		return (0);
-	tmp = tmp->next->next;
-	rev = reverse_listint(&tmp);
-	mid = rev;
+	tmpo = tmpo->next->next;
+	reve = reverse_listint(&tmpo);
+	mid = reve;
 
-	tmp = *head;
-	while (rev)
+	tmpo = *head;
+	while (reve)
 	{
-		if (tmp->n != rev->n)
+		if (tmpo->n != reve->n)
 			return (0);
-		tmp = tmp->next;
-		rev = rev->next;
+		tmpo = tmpo->next;
+		reve = reve->next;
 	}
 	reverse_listint(&mid);
 
