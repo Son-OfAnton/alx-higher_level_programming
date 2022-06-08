@@ -8,9 +8,9 @@ def roman_to_int(roman_string):
         return roman.get(roman_string)
     for i in range(len(roman_string)):
         if (i + 1) == len(roman_string):
-            number += rom_num.get(roman_string[i])
-        elif rom_num.get(roman_string[i]) >= rom_num.get(roman_string[i + 1]):
-            number += rom_num.get(roman_string[i])
+            number += roman.get(roman_string[i])
+        elif roman.get(roman_string[i]) >= roman.get(roman_string[i + 1]):
+            number += roman.get(roman_string[i])
         else:
-            number -= rom_num.get(roman_string[i])
+            number -= roman.get(roman_string[i])
     return number
