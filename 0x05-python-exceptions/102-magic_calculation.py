@@ -2,14 +2,14 @@
 
 
 def magic_calculation(a, b):
-    value = 0
+    result = 0
     for i in range(1, 3):
         try:
             if i > a:
                 raise Exception('Too far')
             else:
-                value += a ** b / i
+                result += a ** b / i
         except:
-            value = b + a
+            result = b + a
             break
-    return (value)
+    return (result)
