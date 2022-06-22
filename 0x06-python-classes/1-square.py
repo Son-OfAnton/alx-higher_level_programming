@@ -6,4 +6,4 @@ class Square:
     """private size field"""
     def __init__(self, size):
         """initializing the square"""
-        slef.__size = size
+        self.__size = size
