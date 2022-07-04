@@ -1,11 +1,14 @@
 #!/usr/bin/python3
-"""print_sorted"""
+"""
+This module implements a custom list object
+"""
 
 
 class MyList(list):
-    """
-    MyList
+    """Custom List
     """
     def print_sorted(self):
-        """prints the list in an ascending order"""
+        """
+        prints the list, but sorted (ascending sort)
+        """
         print(sorted(self))
