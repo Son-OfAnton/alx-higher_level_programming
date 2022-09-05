@@ -6,10 +6,12 @@ const myObject = {
 console.log(myObject);
 
 myObject.incr = function () {
-  this.value++;
+  return this.value++;
 };
 
-for (let i = 0; i < 3; i++) {
-  myObject.incr();
-  console.log(myObject);
-}
+myObject.incr();
+console.log(myObject);
+myObject.incr();
+console.log(myObject);
+myObject.incr();
+console.log(myObject);
