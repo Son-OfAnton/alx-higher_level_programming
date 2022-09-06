@@ -14,14 +14,10 @@ module.exports = class Rectangle {
   }
 
   rotate () {
-    const temp = 0;
-    temp = this.width;
-    this.width = this.height;
-    this.height = temp;
+    [this.width, this.height] = [this.height, this.width];
   }
 
   double () {
-    this.width *= 2;
-    this.height *= 2;
+    [this.width, this.height] = [this.width * 2, this.height * 2];
   }
 };
