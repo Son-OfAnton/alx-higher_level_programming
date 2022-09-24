@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 sends a request to the URL passed as an arrgument and
-displays the value of the variable X-Request-Id in the 
+displays the value of the variable X-Request-Id in the
 response header using requests package
 """
 
