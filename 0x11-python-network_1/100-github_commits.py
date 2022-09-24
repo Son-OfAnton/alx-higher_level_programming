@@ -8,10 +8,10 @@ import sys
 import requests
 
 if __name__ == '__main__':
-    reposit_name = sys.argv[1]
-    username = sys.argv[2]
+    repo_name = sys.argv[1]
+    user = sys.argv[2]
 
-    url = 'https://api.github.com/repos/{}/{}/commits'.format(username, reposit_name)
+    url = 'https://api.github.com/repos/{}/{}/commits'.format(user, repo_name)
     res = requests.get(url)
     response = res.json()
     try:
